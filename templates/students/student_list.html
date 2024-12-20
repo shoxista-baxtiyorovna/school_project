@@ -9,7 +9,7 @@
     <button><a href="{% url 'students:student_form' %}">Create Student</a></button>
     <button><a href="{% url 'home' %}">Back Home</a></button>
     {% for student in students %}
-        <h2>{{ student.first_name }} {{ student.last_name }}</h2>
+        <a href="{{ student.get_detail_url }}"><h2>{{ student.first_name }} {{ student.last_name }}</h2></a>
     {% empty %}
         <h2>For now there are no students</h2>
     {% endfor %}

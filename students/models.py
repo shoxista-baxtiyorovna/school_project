@@ -10,3 +10,6 @@ class Student(models.Model):
 
     def get_detail_url(self):
         return reverse('students:student_detail', args=[self.pk])
+
+    def get_delete_url(self):
+        return reverse('students:student_delete', args=[self.pk])
